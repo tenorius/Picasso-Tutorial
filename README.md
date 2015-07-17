@@ -99,6 +99,9 @@
 </RelativeLayout>
 ```
 Setamos aqui como queremos a aparencia do nosso grid, tamanho das celulas, espacamento entre elas, etc...
+
+<img src="https://github.com/tenorius/Picasso-Tutorial/blob/master/app/src/main/res/tuto_images/telaInicial.png" alt="alt text" width="270" height="480"> <img src="https://github.com/tenorius/Picasso-Tutorial/blob/master/app/src/main/res/tuto_images/telainicial2.png" alt="alt text" width="480" height="270">
+
 ###7. O codigo da main activity
 Nessa classe adicionamos um listener para vigiar clicks nas celucas do gridView:
 ```java
@@ -128,6 +131,9 @@ Crie as seguintes variaveis estaticas globais:
     static boolean transform=false;
     static boolean debug=false;
 ```
+
+<img src="https://github.com/tenorius/Picasso-Tutorial/blob/master/app/src/main/res/tuto_images/menu1.png" alt="alt text" width="270" height="480">
+
 Essas variavies serao fornecidas para o usuario ativar certas funcionalidades da biblioteca Picasso.
 Ao criar o projeto no Android Studio, por default ele ja inclui um menu na activity. Adicionamos o seguinte codigo ao metodo `onOptionsItemSelected`:
 ```java
@@ -168,6 +174,8 @@ As funcionalidades:
 * Resize - Altera a escala da imagem
 * debug - podemos ver de onde a imagem esta sendo carregada
 * placeholder - imagem temporaria.
+ 
+<img src="https://github.com/tenorius/Picasso-Tutorial/blob/master/app/src/main/res/tuto_images/menu2.png" alt="alt text" width="270" height="480">
 
 ###8. A segunda activity: ImageActivity
     Nesta activity mostraremos a imagem com as funcionalidades ativadas pelo usuario. No metodo `onCreate` adicione:
@@ -202,8 +210,7 @@ As funcionalidades:
     *  Ativamos/desativamos as funcionalidades de rotacao, resizing e placeholder
     *  e para finalizar a requisicao que carregará a imagem usamos `p.error(R.drawable.sorry).into(imageView);`
     
-    
-
+<img src="https://github.com/tenorius/Picasso-Tutorial/blob/master/app/src/main/res/tuto_images/dog_normal.png" alt="alt text" width="270" height="480"> <img src="https://github.com/tenorius/Picasso-Tutorial/blob/master/app/src/main/res/tuto_images/dog_resize.png" alt="alt text" width="270" height="480"> <img src="https://github.com/tenorius/Picasso-Tutorial/blob/master/app/src/main/res/tuto_images/planeta1.png" alt="alt text" width="270" height="480">  <img src="https://github.com/tenorius/Picasso-Tutorial/blob/master/app/src/main/res/tuto_images/planeta2.png" alt="alt text" width="270" height="480"> <img src="https://github.com/tenorius/Picasso-Tutorial/blob/master/app/src/main/res/tuto_images/debug1.png" alt="alt text" width="270" height="480"> <img src="https://github.com/tenorius/Picasso-Tutorial/blob/master/app/src/main/res/tuto_images/debug2.png" alt="alt text" width="270" height="480">   
 
 ###8. Rode o App
 
