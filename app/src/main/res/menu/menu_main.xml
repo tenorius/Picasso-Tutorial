@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+    <item android:id="@+id/action_settings" android:title="@string/action_settings"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_rotation" android:title="@string/action_rotation"
+         android:checkable="true"/>
+    <item android:id="@+id/action_placeholder" android:title="@string/action_placeholder"
+         android:checkable="true"/>
+    <item android:id="@+id/action_resize" android:title="@string/action_resize"
+         android:checkable="true"/>
+    <item android:id="@+id/action_debug" android:title="@string/action_debug"
+        android:checkable="true"/>
+    <item android:id="@+id/action_transform" android:title="@string/action_transform"
+         android:checkable="true"/>
+
+</menu>
