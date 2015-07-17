@@ -232,6 +232,8 @@ public class MainActivity extends ActionBarActivity {
 
 ```
 
+###8. Rode o App
+
     
 
 
