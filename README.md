@@ -22,6 +22,7 @@ Esse tutorial pode ser resumido em 5 etapas:
         <item>http://i.imgur.com/Yfa4JDLh.jpg</item>
         <item>http://i.imgur.com/hoqnvq5.jpg</item>
         <item>http://i.imgur.com/CvIpxcw.jpg</item>
+        
         <item>http://i.imgur.com/IDgHz9Y.jpg</item>
         <item>http://i.imgur.com/fSwxpcp.jpg</item>
         <item>http://i.imgur.com/9hOdzsx.jpg</item>
@@ -43,8 +44,14 @@ Esse tutorial pode ser resumido em 5 etapas:
         <item>http://i.imgur.com/GDcH5uA.jpg</item>
 
     </string-array>
-```    
-
+```
+###4. AndroidManifest.xml
+    Adicione a seguinte permissão: 
+    
+```xml
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+```
     
 
 
