@@ -9,7 +9,7 @@ Sem Picasso o desenvolvedor deve:
 Com Picasso você nao precisa se preocupar com nada disso. Basta uma linha de codigo!!! 
 Então vamos ver na pratica como essa biblioteca funciona.   
 ###1. Crie o Projeto
-    No Android Studio crie um projeto android chamado TutorialPicasso com uma Activity.
+    No Android Studio crie um projeto android chamado TutorialPicasso com uma Activity e um menu(extenda ActionBarActivity). 
 ###2. Adicione a biblioteca Picasso
     Adicione a seguinte linha seguinte linha as dependendias do build.gradle:
     `compile 'com.squareup.picasso:picasso:2.3.3'`
