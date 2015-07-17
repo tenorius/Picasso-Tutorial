@@ -208,7 +208,45 @@ As funcionalidades:
 
 
 
+###8. ImageActivity
+    Nesta activity mostraremos a imagem com as funcionalidades ativadas pelo usuario. No metodo `onCreate` adicione:
+    
+    ```java
+        Bundle b = this.getIntent().getExtras();
 
+        int selItem = b.getInt("url");
+        ImageView imageView = (ImageView) findViewById(R.id.imageView);
+
+        Picasso pp = Picasso.with(this);
+
+        if(MainActivity.debug) {
+            pp.setIndicatorsEnabled(true);
+        }else {
+            pp.setIndicatorsEnabled(false);
+        }
+
+        RequestCreator p = pp.load(MainActivity.images[selItem]);
+
+        if(MainActivity.rotation) {
+            p.rotate(60);
+        }
+        if(MainActivity.resizing) {
+            p.resize((int) (Math.random() * 200) + 50, (int) (Math.random() * 200) + 50);
+        }
+        if(MainActivity.placeholder) {
+            p.placeholder(R.drawable.placeholder);
+        }
+        p.error(R.drawable.sorry).into(imageView);
+    ```
+* Primeiramente, recuperamos o extra passado pela Main Activity
+* Entao começamos a construir nossa requisicao Picasso passo a passo:
+    *  Criamos o objeto Picasso com o contexto `Picasso pp = Picasso.with(this);`
+    *  Ativamos/desativamos o modo de debug com `pp.setIndicatorsEnabled();`
+    *  Criamos o objeto RequestCreator com a imagem requisitada `RequestCreator p = pp.load(MainActivity.images[selItem]);`
+    *  Ativamos/desativamos as funcionalidades de rotacao, resizing e placeholder
+    *  e para finalizar a requisicao que carregará a imagem usamos `p.error(R.drawable.sorry).into(imageView);`
+    
+    
 
 
 ###8. Rode o App
