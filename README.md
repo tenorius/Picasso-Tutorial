@@ -224,7 +224,7 @@ As funcionalidades:
     
 <img src="https://github.com/tenorius/Picasso-Tutorial/blob/master/app/src/main/res/tuto_images/dog_normal.png" alt="alt text" width="270" height="480"> <img src="https://github.com/tenorius/Picasso-Tutorial/blob/master/app/src/main/res/tuto_images/dog_resize.png" alt="alt text" width="270" height="480"> <img src="https://github.com/tenorius/Picasso-Tutorial/blob/master/app/src/main/res/tuto_images/planeta1.png" alt="alt text" width="270" height="480">  <img src="https://github.com/tenorius/Picasso-Tutorial/blob/master/app/src/main/res/tuto_images/planeta2.png" alt="alt text" width="270" height="480"> <img src="https://github.com/tenorius/Picasso-Tutorial/blob/master/app/src/main/res/tuto_images/debug1.png" alt="alt text" width="270" height="480"> <img src="https://github.com/tenorius/Picasso-Tutorial/blob/master/app/src/main/res/tuto_images/debug2.png" alt="alt text" width="270" height="480">   
 
-###8. Rode o App
+###9. Rode o App
 
     
 
