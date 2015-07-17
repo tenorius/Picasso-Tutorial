@@ -184,7 +184,7 @@ Aqui temos um listener para os clicks nos itens do nosso menu. Checamos que item
 As funcionalidades:
 * Rotation - gira a imagem original em um certo sentido e angulo.
 * Resize - Altera a escala da imagem
-* debug - podemos ver de onde a imagem esta sendo carregada
+* debug - podemos ver de onde a imagem esta sendo carregada. O triangulo colorido indica a fonte: verde cache, amarelo disk.
 * placeholder - imagem temporaria.
  
 <img src="https://github.com/tenorius/Picasso-Tutorial/blob/master/app/src/main/res/tuto_images/menu2.png" alt="alt text" width="270" height="480">
