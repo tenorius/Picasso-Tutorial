@@ -68,6 +68,8 @@ Então vamos ver na pratica como essa biblioteca funciona.
         *   convertView - uma view antiga que pode ser reciclada
         *   parent - o grid view no qual colocaremos a imagem
     *   Picasso - a biblioteca sobre estudo
+    *   ImageView - o image view que retornamos para a tela em uma das celulas do grid.
+        Checamos se podemos reusar o ConvertView. Caso não, nos criamos a nova image view.
     *   with - o contexto da instancia do objeto Picasso
     *   load - a imagem que queremos carregar na celula do grid
     *   placeholder - imagem mostrada enquanto é feito o loading da requisitada
