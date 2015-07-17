@@ -1,19 +1,13 @@
 #Tutorial sobre a biblioteca Picasso para Android
 
-Esse tutorial pode ser resumido em 5 etapas:
 
-1. Criar a aplicacao
-2. 
-3. Setar as permissoes
-4. Criar o Adapter
-5. Popular o GridView com o adapter
 
 ###1. Adicionar a biblioteca Picasso
     Crie um projeto android chamado TutorialPicasso com uma Activity.
 ###2. Adicione a biblioteca Picasso
     Adicione a seguinte linha seguinte linha as dependendias do build.gradle:
   
-`compile 'com.squareup.picasso:picasso:2.3.3'`
+    `compile 'com.squareup.picasso:picasso:2.3.3'`
 
 ###3. Strings.xml
     Adicione o seguinte array:
@@ -52,6 +46,8 @@ Esse tutorial pode ser resumido em 5 etapas:
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 ```
+###5. Crie uma classe java chamada MyImageAdapter
+    adicionde o seguinte codigo a classe: 
     
 
 
