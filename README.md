@@ -62,18 +62,18 @@ Então vamos ver na pratica como essa biblioteca funciona.
         return imageView;
     }
 ```
-* Parametros:
-    * position - a posição da imagem no adapter(tambem usada como index no array de imagens)
-    * convertView - uma view antiga que pode ser reciclada
-    * parent - o grid view no qual colocaremos a imagem
-* ImageView - o image view que retornamos para a tela em uma das celulas do grid. Checamos se podemos reusar o convertView. Caso não, nos criamos a nova image view.
-* Picasso - a biblioteca sobre estudo
-* with - o contexto da instancia do objeto Picasso
-* load - a imagem que queremos carregar na celula do grid
-* placeholder - imagem mostrada enquanto é feito o loading da requisitada
-* error - uma imagem mostrada quando a requisitada falha em carregar
-* noFade - por default, a imagem sofre um 'fade in' se carregada do cache do disco ou da internet. No codigo nos disabilitamos o fade-in
-* resize - definimos uma nova escala para imagem requisitada
+*   Parametros:
+    *   position - a posição da imagem no adapter(tambem usada como index no array de imagens)
+    *   convertView - uma view antiga que pode ser reciclada
+    *   parent - o grid view no qual colocaremos a imagem
+*   ImageView - o image view que retornamos para a tela em uma das celulas do grid. Checamos se podemos reusar o convertView.     Caso não, nos criamos a nova image view.
+*   Picasso - a biblioteca sobre estudo
+*   with - o contexto da instancia do objeto Picasso
+*   load - a imagem que queremos carregar na celula do grid
+*   placeholder - imagem mostrada enquanto é feito o loading da requisitada
+*   error - uma imagem mostrada quando a requisitada falha em carregar
+*   noFade - por default, a imagem sofre um 'fade in' se carregada do cache do disco ou da internet. No codigo nos               disabilitamos o fade-in
+*   resize - definimos uma nova escala para imagem requisitada
 
 ###6. Adicione um GridView ao activity_main.xml
 ```xml
@@ -104,12 +104,12 @@ Então vamos ver na pratica como essa biblioteca funciona.
         />
 </RelativeLayout>
 ```
-Setamos aqui como queremos a aparencia do nosso grid, tamanho das celulas, espacamento entre elas, etc...
+    Setamos aqui como queremos a aparencia do nosso grid, tamanho das celulas, espacamento entre elas, etc...
 
 <img src="https://github.com/tenorius/Picasso-Tutorial/blob/master/app/src/main/res/tuto_images/telaInicial.png" alt="alt text" width="270" height="480"> <img src="https://github.com/tenorius/Picasso-Tutorial/blob/master/app/src/main/res/tuto_images/telainicial2.png" alt="alt text" width="480" height="270">
 
 ###7. O codigo da main activity
-Nessa classe adicionamos um listener para vigiar clicks nas celucas do gridView:
+    Nessa classe adicionamos um listener para vigiar clicks nas celucas do gridView:
 ```java
 gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
@@ -123,13 +123,13 @@ gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             }
         });
 ```
-Selecionar uma imagem do grid dispara o metodo onItemClick(). Consequentemente uma activity é iniciada para mostrar a imagem em uma versão maior e com certas funcionalidades da picasso aplicadas. veremos mais adiante que funcionalidades sao essas.
-destaques:
-* Criamos um Intent que é usado para iniciar a segunda activity
-* putExtra - passamos a posicao do item selecionado no adapter. Usaremos esse parametro na segunda activity para pegar a url da imagem
-* startActivity - inicia uma nova activity
+    Selecionar uma imagem do grid dispara o metodo onItemClick(). Consequentemente uma activity é iniciada para mostrar a        imagem em uma versão maior e com certas funcionalidades da picasso aplicadas. veremos mais adiante que funcionalidades       sao essas.
+    destaques:
+*   Criamos um Intent que é usado para iniciar a segunda activity
+*   putExtra - passamos a posicao do item selecionado no adapter. Usaremos esse parametro na segunda activity para pegar a       url da imagem
+*   startActivity - inicia uma nova activity
 
-Crie as seguintes variaveis estaticas globais:
+    Crie as seguintes variaveis estaticas globais:
 ```java
     static boolean rotation=false;
     static boolean resizing=false;
@@ -140,8 +140,9 @@ Crie as seguintes variaveis estaticas globais:
 
 <img src="https://github.com/tenorius/Picasso-Tutorial/blob/master/app/src/main/res/tuto_images/menu1.png" alt="alt text" width="270" height="480">
 
-Essas variavies serao fornecidas para o usuario ativar certas funcionalidades da biblioteca Picasso.
-Ao criar o projeto no Android Studio, por default ele ja inclui um menu na activity. Adicionamos o seguinte codigo ao metodo `onOptionsItemSelected`:
+    Essas variavies serao fornecidas para o usuario ativar certas funcionalidades da biblioteca Picasso.
+    Ao criar o projeto no Android Studio, por default ele ja inclui um menu na activity. Adicionamos o seguinte codigo ao        metodo `onOptionsItemSelected`:
+    
 ```java
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
