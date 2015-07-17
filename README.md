@@ -2,8 +2,8 @@
 
 
 
-###1. Adicionar a biblioteca Picasso
-    Crie um projeto android chamado TutorialPicasso com uma Activity.
+###1. Crie o Projeto
+    No Android Studio crie um projeto android chamado TutorialPicasso com uma Activity.
 ###2. Adicione a biblioteca Picasso
     Adicione a seguinte linha seguinte linha as dependendias do build.gradle:
   
@@ -39,53 +39,22 @@
 
     </string-array>
 ```
+    Essas são as urls das imagens que iremos utilizar no aplicativo. Voce pode troca-las por links 
+    de sua escolha, imagens nos recursos do aplicativo ou no cartao de memoria.
+
 ###4. AndroidManifest.xml
-    Adicione a seguinte permissão: 
-    
+    Adicione as seguinte permissão: 
 ```xml
     <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 ```
+    Obrigatorio quando se deseja que Picasso baixe imagens da internet.
+    
 ###5. Crie uma classe java chamada MyImageAdapter
-    adicionde o seguinte codigo a classe:
+    
+    Essa é a classe responsavel por popular o GridView de nossa tela principal. 
+    O grosso do trabalho dessa classe é feito no seguinte trecho de codigo:
     
 ```java
-    package com.example.tenorio.myapplication3;
-
-import android.content.Context;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.GridView;
-import android.widget.ImageView;
-
-import com.squareup.picasso.Picasso;
-
-/**
- * Created by tenorio on 7/7/2015.
- */
-public class ImageAdapter extends BaseAdapter{
-    private Context mContext;
-    private String[] mImages;
-    public ImageAdapter(Context c, String[] i) {
-        mContext = c;
-        mImages = i;
-    }
-
-    public int getCount() {
-        return mImages.length;
-    }
-
-    public Object getItem(int position) {
-        return null;
-    }
-
-    public long getItemId(int position) {
-        return 0;
-    }
-
-    // create a new ImageView for each item referenced by the Adapter
     public View getView(int position, View convertView, ViewGroup parent) {
 
         ImageView imageView;
@@ -102,9 +71,14 @@ public class ImageAdapter extends BaseAdapter{
 
         return imageView;
     }
-
-}
 ```
+    Destaques:
+     *Parametros:
+       *position - a posição da imagem no adapter(tambem usada como index no array de imagens)
+       *convertView - uma view antiga que pode ser reciclada
+       *parent - o grid view no qual colocaremos a imagem
+     
+
 ###6. Adicione um GridView ao activity_main.xml
     
 ```xml
