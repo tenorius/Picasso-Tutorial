@@ -1,7 +1,13 @@
 #Tutorial Picasso para Android
 
+A Biblioteca Picasso é uma ferramenta muito poderosa para evitar manipulação de bitmaps em sua aplicação. Ela se encarregar  de exibir a imagem de forma eficiente em um ImageView,seja essa imagem oriunda de sdcard local, rede ou recurso de aplicativo. Tudo isto pode ser feito de uma única linha de código.
+Sem Picasso o desenvolvedor deve:
+* Usar AsyncTask pra baixar imagens no background
+* Alem da thread no background, tem que manter controle sobre os downloads para uma ImageView em ordem pra lidar com mudanças de orientaçao ou se o usuario usou o scroll da List/GridView
+* Implementar LRUCache<String, Bitmap> pra o caching de imagens baixadas
 
-
+Com Picasso você nao precisa se preocupar com nada disso. Basta uma linha de codigo!!! 
+Então vamos ver na pratica como essa biblioteca funciona.   
 ###1. Crie o Projeto
     No Android Studio crie um projeto android chamado TutorialPicasso com uma Activity.
 ###2. Adicione a biblioteca Picasso
