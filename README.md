@@ -1,4 +1,4 @@
-#Tutorial sobre a biblioteca Picasso para Android
+#Tutorial Picasso para Android
 
 
 
@@ -6,9 +6,7 @@
     No Android Studio crie um projeto android chamado TutorialPicasso com uma Activity.
 ###2. Adicione a biblioteca Picasso
     Adicione a seguinte linha seguinte linha as dependendias do build.gradle:
-  
     `compile 'com.squareup.picasso:picasso:2.3.3'`
-
 ###3. Strings.xml
     Adicione o seguinte array:
 ```xml
@@ -42,12 +40,9 @@
     <uses-permission android:name="android.permission.INTERNET"/>
 ```
     Obrigatorio quando se deseja que Picasso baixe imagens da internet.
-    
 ###5. Crie uma classe java chamada MyImageAdapter
-    
     Essa é a classe responsavel por popular o GridView de nossa tela principal. 
     O grosso do trabalho dessa classe é feito no seguinte trecho de codigo:
-    
 ```java
     public View getView(int position, View convertView, ViewGroup parent) {
         ImageView imageView;
@@ -61,7 +56,6 @@
         return imageView;
     }
 ```
-    
 * Parametros:
     * position - a posição da imagem no adapter(tambem usada como index no array de imagens)
     * convertView - uma view antiga que pode ser reciclada
@@ -74,9 +68,8 @@
 * error - uma imagem mostrada quando a requisitada falha em carregar
 * noFade - por default, a imagem sofre um 'fade in' se carregada do cache do disco ou da internet. No codigo nos disabilitamos o fade-in
 * resize - definimos uma nova escala para imagem requisitada
-       
+
 ###6. Adicione um GridView ao activity_main.xml
-    
 ```xml
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
@@ -106,11 +99,8 @@
 </RelativeLayout>
 ```
 Setamos aqui como queremos a aparencia do nosso grid, tamanho das celulas, espacamento entre elas, etc...
-
 ###7. O codigo da main activity
-
 Nessa classe adicionamos um listener para vigiar clicks nas celucas do gridView:
-
 ```java
 gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
@@ -126,15 +116,11 @@ gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 ```
 Selecionar uma imagem do grid dispara o metodo onItemClick(). Consequentemente uma activity é iniciada para mostrar a imagem em uma versão maior e com certas funcionalidades da picasso aplicadas. veremos mais adiante que funcionalidades sao essas.
 destaques:
-
 * Criamos um Intent que é usado para iniciar a segunda activity
 * putExtra - passamos a posicao do item selecionado no adapter. Usaremos esse parametro na segunda activity para pegar a url da imagem
 * startActivity - inicia uma nova activity
 
-
-
 Crie as seguintes variaveis estaticas globais:
-
 ```java
     static boolean rotation=false;
     static boolean resizing=false;
@@ -143,10 +129,7 @@ Crie as seguintes variaveis estaticas globais:
     static boolean debug=false;
 ```
 Essas variavies serao fornecidas para o usuario ativar certas funcionalidades da biblioteca Picasso.
-
-
 Ao criar o projeto no Android Studio, por default ele ja inclui um menu na activity. Adicionamos o seguinte codigo ao metodo `onOptionsItemSelected`:
-
 ```java
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -185,11 +168,8 @@ As funcionalidades:
 * Resize - Altera a escala da imagem
 * debug - podemos ver de onde a imagem esta sendo carregada
 * placeholder - imagem temporaria.
- 
 
-
-
-###8. ImageActivity
+###8. A segunda activity: ImageActivity
     Nesta activity mostraremos a imagem com as funcionalidades ativadas pelo usuario. No metodo `onCreate` adicione:
     
     ```java
