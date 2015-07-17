@@ -122,7 +122,31 @@
 
 </RelativeLayout>
 ```
+Setamos aqui como queremos a aparencia do nosso grid, tamanho das celulas, espacamento entre elas, etc...
+
 ###7. O codigo da main activity
+
+Nessa classe adicionamos um listener para vigiar clicks nas celucas do gridView:
+
+```java
+gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View v,
+                                    int position, long id) {
+
+                Intent i = new Intent(MainActivity.this,ImageActivity.class);
+
+                i.putExtra("url", position);
+                startActivity(i);
+
+            }
+        });
+```
+Selecionar uma imagem do grid dispara o metodo onItemClick(). Consequentemente uma activity é iniciada para mostrar a imagem em uma versão maior e com certas funcionalidades da picasso aplicadas. veremos mais adiante que funcionalidades sao essas.
+destaques:
+
+* Criamos um Intent que é usado para iniciar a segunda activity
+* putExtra - passamos a posicao do item selecionado no adapter. Usaremos esse parametro na segunda activity para pegar a url da imagem
+* startActivity - inicia uma nova activity
 
 ```java
 package com.example.tenorio.myapplication3;
