@@ -16,27 +16,21 @@
         <item>http://i.imgur.com/Yfa4JDLh.jpg</item>
         <item>http://i.imgur.com/hoqnvq5.jpg</item>
         <item>http://i.imgur.com/CvIpxcw.jpg</item>
-        
         <item>http://i.imgur.com/IDgHz9Y.jpg</item>
         <item>http://i.imgur.com/fSwxpcp.jpg</item>
         <item>http://i.imgur.com/9hOdzsx.jpg</item>
-
         <item>http://i.imgur.com/BZFHk5l.jpg</item>
         <item>http://i.imgur.com/ZfqEtUw.jpg</item>
         <item>http://i.imgur.com/bG3G8Mg.jpg</item>
-
         <item>http://i.imgur.com/4maX4Jf.jpg</item>
         <item>http://i.imgur.com/MzikJ6H.jpg</item>
         <item>http://i.imgur.com/IA3PVYn.jpg</item>
-
         <item>http://i.imgur.com/uE9vStH.jpg</item>
         <item>http://i.imgur.com/OrT3GsX.jpg</item>
         <item>http://i.imgur.com/ZMrsTmZ.jpg</item>
-
         <item>http://i.imgur.com/bh918lC.jpg</item>
         <item>http://i.imgur.com/AfXb9nl.png</item>
         <item>http://i.imgur.com/GDcH5uA.jpg</item>
-
     </string-array>
 ```
     Essas são as urls das imagens que iremos utilizar no aplicativo. Voce pode troca-las por links 
@@ -56,24 +50,17 @@
     
 ```java
     public View getView(int position, View convertView, ViewGroup parent) {
-
         ImageView imageView;
         if (convertView == null) {
-
             imageView = new ImageView(mContext);
-
-
         } else {
             imageView = (ImageView) convertView;
         }
-
         Picasso.with(mContext).load(mImages[position]).placeholder(R.drawable.placeholder).error(R.drawable.sorry).resize(200,200).noFade().centerCrop().into(imageView);
 
         return imageView;
     }
 ```
-
-####Destaques:
     
 * Parametros:
     * position - a posição da imagem no adapter(tambem usada como index no array de imagens)
@@ -88,8 +75,6 @@
 * noFade - por default, a imagem sofre um 'fade in' se carregada do cache do disco ou da internet. No codigo nos disabilitamos o fade-in
 * resize - definimos uma nova escala para imagem requisitada
        
-     
-
 ###6. Adicione um GridView ao activity_main.xml
     
 ```xml
@@ -100,7 +85,6 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
-
 
     <ImageView
         android:layout_width="wrap_content"
@@ -119,7 +103,6 @@
         android:stretchMode="columnWidth"
         android:gravity="center"
         />
-
 </RelativeLayout>
 ```
 Setamos aqui como queremos a aparencia do nosso grid, tamanho das celulas, espacamento entre elas, etc...
@@ -194,8 +177,6 @@ Ao criar o projeto no Android Studio, por default ele ja inclui um menu na activ
             default:
                 return super.onOptionsItemSelected(item);
         }
-
-
     }
 ```
 Aqui temos um listener para os clicks nos itens do nosso menu. Checamos que item foi clicado e ativamos/desativamos a funcionalidade relativa ao item.
@@ -213,20 +194,15 @@ As funcionalidades:
     
     ```java
         Bundle b = this.getIntent().getExtras();
-
         int selItem = b.getInt("url");
         ImageView imageView = (ImageView) findViewById(R.id.imageView);
-
         Picasso pp = Picasso.with(this);
-
         if(MainActivity.debug) {
             pp.setIndicatorsEnabled(true);
         }else {
             pp.setIndicatorsEnabled(false);
         }
-
         RequestCreator p = pp.load(MainActivity.images[selItem]);
-
         if(MainActivity.rotation) {
             p.rotate(60);
         }
