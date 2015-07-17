@@ -86,6 +86,7 @@
 * placeholder - imagem mostrada enquanto é feito o loading da requisitada
 * error - uma imagem mostrada quando a requisitada falha em carregar
 * noFade - por default, a imagem sofre um 'fade in' se carregada do cache do disco ou da internet. No codigo nos disabilitamos o fade-in
+* resize - definimos uma nova escala para imagem requisitada
        
      
 
