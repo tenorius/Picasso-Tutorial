@@ -62,17 +62,19 @@ Então vamos ver na pratica como essa biblioteca funciona.
         return imageView;
     }
 ```
+
     *   Parametros:
         *   position - a posição da imagem no adapter(tambem usada como index no array de imagens)
         *   convertView - uma view antiga que pode ser reciclada
         *   parent - o grid view no qual colocaremos a imagem
-    *   ImageView - o image view que retornamos para a tela em uma das celulas do grid. Checamos se podemos reusar o             convertView.     Caso não, nos criamos a nova image view.
+    *   ImageView - o image view que retornamos para a tela em uma das celulas do grid. Checamos se podemos reusar o convertView. Caso não, nos criamos a nova image view.
     *   Picasso - a biblioteca sobre estudo
     *   with - o contexto da instancia do objeto Picasso
     *   load - a imagem que queremos carregar na celula do grid
     *   placeholder - imagem mostrada enquanto é feito o loading da requisitada
     *   error - uma imagem mostrada quando a requisitada falha em carregar
-    *   noFade - por default, a imagem sofre um 'fade in' se carregada do cache do disco ou da internet. No codigo nos               disabilitamos o fade-in
+    *   noFade - por default, a imagem sofre um 'fade in' se carregada do cache do disco ou da internet. 
+        No codigo nosdisabilitamos o fade-in
     *   resize - definimos uma nova escala para imagem requisitada
 
 
