@@ -18,7 +18,8 @@ Esse tutorial pode ser resumido em 5 etapas:
 ###3. Strings.xml
     Adicione o seguinte array:
     
-`
+
+    ```xml
     <string-array name="images">
         <item>http://i.imgur.com/Yfa4JDLh.jpg</item>
         <item>http://i.imgur.com/hoqnvq5.jpg</item>
@@ -45,7 +46,7 @@ Esse tutorial pode ser resumido em 5 etapas:
         <item>http://i.imgur.com/GDcH5uA.jpg</item>
 
     </string-array>
-`
+    ```
     
 
 
