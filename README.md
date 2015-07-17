@@ -148,63 +148,23 @@ destaques:
 * putExtra - passamos a posicao do item selecionado no adapter. Usaremos esse parametro na segunda activity para pegar a url da imagem
 * startActivity - inicia uma nova activity
 
+
+
+Crie as seguintes variaveis estaticas globais:
+
 ```java
-package com.example.tenorio.myapplication3;
-
-import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.GridView;
-import android.widget.ImageView;
-import android.widget.Toast;
-
-import com.squareup.picasso.Picasso;
-
-
-public class MainActivity extends ActionBarActivity {
-
-    static String[] images;
     static boolean rotation=false;
     static boolean resizing=false;
     static boolean placeholder=false;
     static boolean transform=false;
     static boolean debug=false;
+```
+Essas variavies serao fornecidas para o usuario ativar certas funcionalidades da biblioteca Picasso.
 
 
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        images = getResources().getStringArray(R.array.images);
-        final GridView gridview = (GridView) findViewById(R.id.gridview);
-        gridview.setAdapter(new ImageAdapter(this, images));
+Ao criar o projeto no Android Studio, por default ele ja inclui um menu na activity. Adicionamos o seguinte codigo ao metodo `onOptionsItemSelected`:
 
-        gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View v,
-                                    int position, long id) {
-
-                Intent i = new Intent(MainActivity.this,ImageActivity.class);
-
-                i.putExtra("url", position);
-                startActivity(i);
-
-            }
-        });
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-
-        return true;
-    }
-
-    @Override
+```java
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
@@ -237,9 +197,19 @@ public class MainActivity extends ActionBarActivity {
 
 
     }
-}
-
 ```
+Aqui temos um listener para os clicks nos itens do nosso menu. Checamos que item foi clicado e ativamos/desativamos a funcionalidade relativa ao item.
+As funcionalidades:
+* Rotation - gira a imagem original em um certo sentido e angulo.
+* Resize - Altera a escala da imagem
+* debug - podemos ver de onde a imagem esta sendo carregada
+* placeholder - imagem temporaria.
+ 
+
+
+
+
+
 
 ###8. Rode o App
 
