@@ -49,7 +49,7 @@ Então vamos ver na pratica como essa biblioteca funciona.
 ###5. Crie uma classe java chamada MyImageAdapter
     Essa é a classe responsavel por popular o GridView de nossa tela principal. 
     O grosso do trabalho dessa classe é feito no seguinte trecho de codigo:
-    ```java
+```java
     public View getView(int position, View convertView, ViewGroup parent) {
         ImageView imageView;
         if (convertView == null) {
